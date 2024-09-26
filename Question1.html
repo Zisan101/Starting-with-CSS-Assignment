@@ -1,0 +1,45 @@
+<!-- Create a simple page with some div tags and show different ways to add CSS as well as what happens when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the project where required -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods Demonstration</title>
+
+    <!-- External CSS linked here -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS applied here -->
+    <style>
+        /* Internal CSS */
+        .box {
+            background-color: lightblue; /* This will apply if inline CSS is not present */
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- A simple container for our div boxes -->
+    <div>
+        <!-- Box 1 with inline CSS -->
+        <div class="box" style="background-color: lightgreen; color: white;">
+            <!-- Inline CSS will override both internal and external CSS -->
+            <p>Box 1 - Inline CSS sets background to lightgreen.</p>
+        </div>
+
+        <!-- Box 2 without inline CSS, internal CSS will apply -->
+        <div class="box">
+            <p>Box 2 - Internal CSS sets background to lightblue.</p>
+        </div>
+
+        <!-- Box 3 - External CSS applied -->
+        <div class="box external-box">
+            <p>Box 3 - External CSS sets background to lightcoral and overrides internal CSS.</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- Build an HTML page with multiple paragraphs, each assigned a unique class name. Write CSS rules using class selectors to apply distinct styling to each paragraph. Follow the BEM naming convention and explain how you've named the classes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Example: Paragraph Styling</title>
+    <style>
+        /* BEM-based CSS classes */
+
+        /* Block: paragraph */
+        .paragraph {
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        /* Element: paragraph__intro */
+        .paragraph__intro {
+            color: darkblue;
+            font-size: 18px;
+        }
+
+        /* Element: paragraph__body */
+        .paragraph__body {
+            color: darkgreen;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Element: paragraph__conclusion */
+        .paragraph__conclusion {
+            color: darkred;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Modifier: paragraph__body--highlight */
+        .paragraph__body--highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>BEM Example: Paragraphs with Distinct Styling</h1>
+
+    <!-- Block: paragraph with Element: intro -->
+    <p class="paragraph paragraph__intro">
+        This is the introduction paragraph. It gives an overview of the topic being discussed.
+    </p>
+
+    <!-- Block: paragraph with Element: body -->
+    <p class="paragraph paragraph__body">
+        This is the body paragraph. It contains the main content and expands upon the key points. Notice how the font size and color differ from the introduction.
+    </p>
+
+    <!-- Block: paragraph with Element: body and Modifier: highlight -->
+    <p class="paragraph paragraph__body paragraph__body--highlight">
+        This is another body paragraph with highlighted text. It uses a modifier to emphasize this section.
+    </p>
+
+    <!-- Block: paragraph with Element: conclusion -->
+    <p class="paragraph paragraph__conclusion">
+        This is the conclusion paragraph. It summarizes the content and emphasizes the key takeaways.
+    </p>
+
+</body>
+</html>
